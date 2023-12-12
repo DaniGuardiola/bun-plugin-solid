@@ -1,7 +1,7 @@
 {
   "name": "bun-plugin-solid",
   "description": "A plugin to compile Solid.js with Bun.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "email": "hi@daniguardio.la",
     "name": "Dani Guardiola",
