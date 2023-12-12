@@ -1,6 +1,6 @@
 {
-  "name": "bun-solid-plugin",
-  "description": "My package's description",
+  "name": "bun-plugin-solid",
+  "description": "A plugin to compile Solid.js with Bun.",
   "version": "0.0.1",
   "author": {
     "email": "hi@daniguardio.la",
@@ -16,7 +16,13 @@
     "prepare": "tshy",
     "publish": "changeset publish"
   },
+  "dependencies": {
+    "@babel/core": ">=7.0.0",
+    "@babel/preset-typescript": ">=7.0.0",
+    "babel-preset-solid": ">=1.8.0"
+  },
   "devDependencies": {
+    "@types/babel__core": ">=7.0.0",
     "@changesets/cli": "^2.26.2",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
@@ -29,6 +35,9 @@
     "typescript": "^5.2.2"
   },
   "tshy": {
+    "dialects": [
+      "esm"
+    ],
     "exports": {
       "./package.json": "./package.json",
       ".": "./src/index.ts"
@@ -40,13 +49,7 @@
       "import": {
         "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/commonjs/index.d.ts",
-        "default": "./dist/commonjs/index.js"
       }
     }
-  },
-  "main": "./dist/commonjs/index.js",
-  "types": "./dist/commonjs/index.d.ts"
+  }
 }

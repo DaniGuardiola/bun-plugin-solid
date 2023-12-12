@@ -1,1 +1,1 @@
-# my project
+# bun-plugin-solid
